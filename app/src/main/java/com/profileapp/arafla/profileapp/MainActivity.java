@@ -86,7 +86,9 @@ public class MainActivity extends AppCompatActivity
             //   myIntent.putExtra("key", value); //Optional parameters
             MainActivity.this.startActivity(myIntent);
         } else if (id == R.id.certif) {
-
+            Intent myIntent = new Intent(MainActivity.this, JustTest.class);
+            //   myIntent.putExtra("key", value); //Optional parameters
+            MainActivity.this.startActivity(myIntent);
         } else if (id == R.id.anomalie) {
         }
 

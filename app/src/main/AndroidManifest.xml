@@ -20,6 +20,11 @@
         </activity>
         <activity android:name=".MainFormationActivity" >
         </activity>
+        <activity
+            android:name=".JustTest"
+            android:label="@string/title_activity_just_test"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>
