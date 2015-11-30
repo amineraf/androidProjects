@@ -6,7 +6,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.profileapp.arafla.profileapp.R;
 
@@ -24,8 +28,8 @@ public class FormationFragment extends Fragment {
     private LinearLayout formationButtons;
     private int mPage;
     FormationService formationService = new FormationService();
-    List<Formation> formationList = formationService.getAllFormations();
-
+    List<String> formationList = formationService.getAllFormations();
+    List<String> myFormation = formationService.getMyFormations();
     public static FormationFragment newInstance(int page) {
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
@@ -38,7 +42,6 @@ public class FormationFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPage = getArguments().getInt(ARG_PAGE);
-
     }
 
     @Override
@@ -47,11 +50,12 @@ public class FormationFragment extends Fragment {
 
         switch (mPage) {
             case 1:
-                return newFormation(inflater, container);
-            case 2:
                 return listFormaton(inflater, container);
-            case 3:
+
+            case 2:
                 return myFormations(inflater, container);
+            case 3:
+                  return newFormation(inflater, container);
         }
         return formationButtons;
     }
@@ -63,10 +67,21 @@ public class FormationFragment extends Fragment {
     }
 
     View listFormaton(LayoutInflater inflater, ViewGroup container) {
-        return inflater.inflate(R.layout.mes_formations, container, false);
+        RelativeLayout v = (RelativeLayout)inflater.inflate(R.layout.formation_list, container, false);
+        ListView mListView = (ListView) v.findViewById(R.id.allFormation);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),
+                R.layout.text_view_formation, formationList);
+        mListView.setAdapter(adapter);
+        return v;
     }
 
     View myFormations(LayoutInflater inflater, ViewGroup container) {
-        return inflater.inflate(R.layout.formation_list, container, false);
+        RelativeLayout v = (RelativeLayout)inflater.inflate(R.layout.mes_formations, container, false);
+        ListView mListView = (ListView) v.findViewById(R.id.mesFormations);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),
+                R.layout.text_view_formation, myFormation);
+        mListView.setAdapter(adapter);
+        return v;
+
     }
 }

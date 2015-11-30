@@ -4,15 +4,15 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/formation"
-            android:icon="@drawable/formation_icon_green"
+            android:icon="@android:drawable/ic_menu_slideshow"
             android:title="Formation" />
         <item
             android:id="@+id/certif"
-            android:icon="@drawable/certif_logo_green"
+            android:icon="@android:drawable/ic_menu_share"
             android:title="Certification" />
         <item
             android:id="@+id/anomalie"
-            android:icon="@drawable/anomalie_green"
+            android:icon="@android:drawable/ic_menu_manage"
             android:title="Anomalie" />
         <!--  <item android:id="@+id/nav_manage" android:icon="@android:drawable/ic_menu_manage"
               android:title="Tools" />-->

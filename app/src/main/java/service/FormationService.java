@@ -10,7 +10,7 @@ import model.Formation;
  */
 public class FormationService {
     FormationDAO formationDAO=new FormationDAO();
-    public List getAllFormations() {
+    public List<String> getAllFormations() {
         return formationDAO.getAllFormations();
     }
 
