@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">ProfileApp</string>
-
+    <string name="app_name">IdeoFormation</string>
+    <string name="search_title">Rechercher Formation</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string-array name="cite">
@@ -9,7 +9,6 @@
     </string-array>
     <string name="deconnect">Déconnexion</string>
     <string name="Choose">Choisir</string>
-    <string name="title_activity_just_test">JustTest</string>
-    <string name="title_activity_anomalie">AnomalieActivity</string>
-    <string name="title_activity_anomalies">AnomaliesActivity</string>
+    <string name="title_activity_anomalies">Anomalies</string>
+    <string name="title_activity_nouvelle_activite">Nouvelle Formation</string>
 </resources>

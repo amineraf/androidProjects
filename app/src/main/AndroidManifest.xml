@@ -20,15 +20,32 @@
         </activity>
         <activity
             android:name=".MainFormationActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            >
+
+        </activity>
         <activity
             android:name=".AnomaliesActivity"
             android:label="@string/title_activity_anomalies"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NouvelleFormation"
+            android:label="@string/title_activity_nouvelle_activite"
+            android:parentActivityName=".MainFormationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ResultatRecherche"
+            android:label="@string/search_title"
+            android:parentActivityName=".MainFormationActivity"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.profileapp.arafla.profileapp.MainActivity" />
+                android:name="android.app.default_searchable"
+                android:resource="@xml/searchable" />
         </activity>
     </application>
 

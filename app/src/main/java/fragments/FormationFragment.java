@@ -55,15 +55,9 @@ public class FormationFragment extends Fragment {
             case 2:
                 return myFormations(inflater, container);
             case 3:
-                  return newFormation(inflater, container);
+                  return myFormations(inflater, container);
         }
         return formationButtons;
-    }
-
-
-    View newFormation(LayoutInflater inflater, ViewGroup container) {
-        return inflater.inflate(R.layout.nouvelle_formation, container, false);
-
     }
 
     View listFormaton(LayoutInflater inflater, ViewGroup container) {

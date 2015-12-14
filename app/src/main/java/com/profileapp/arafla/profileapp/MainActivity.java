@@ -86,13 +86,13 @@ public class MainActivity extends AppCompatActivity
             //   myIntent.putExtra("key", value); //Optional parameters
             MainActivity.this.startActivity(myIntent);
         } else if (id == R.id.certif) {
-           // Intent myIntent = new Intent(MainActivity.this,
-           // .class);
+            // Intent myIntent = new Intent(MainActivity.this,
+            // .class);
             //   myIntent.putExtra("key", value); //Optional parameters
-           // MainActivity.this.startActivity(myIntent);
+            // MainActivity.this.startActivity(myIntent);
         } else if (id == R.id.anomalie) {
-             Intent myIntent = new Intent(MainActivity.this, AnomaliesActivity.class);
-             MainActivity.this.startActivity(myIntent);
+            Intent myIntent = new Intent(MainActivity.this, AnomaliesActivity.class);
+            MainActivity.this.startActivity(myIntent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

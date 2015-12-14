@@ -13,7 +13,7 @@ import fragments.FormationFragment;
  */
 public class FormationFragmentPagerAdapter extends FragmentPagerAdapter {
     final int PAGE_COUNT = 3;
-    private String tabTitles[] = new String[] { "Liste des formations", "Mes Formations", "Nouvelle Formation" };
+    private String tabTitles[] = new String[] { "Liste des formations", "Formations récentes", "Mes Formations" };
     private Context context;
 
     public FormationFragmentPagerAdapter(FragmentManager fm, Context context) {

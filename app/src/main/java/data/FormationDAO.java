@@ -11,7 +11,7 @@ import model.Formation;
  */
 public class FormationDAO {
 
-    public List getAllFormations() {
+    public ArrayList<String> getAllFormations() {
         Date du = new Date();
         Date au = new Date();
         Formation formation1 = new Formation(du, au, "Formation Hybris", "Site Rabat");
