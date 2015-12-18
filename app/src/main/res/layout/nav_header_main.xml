@@ -10,7 +10,17 @@
     android:background="#65CEA7"
     android:orientation="vertical"
     android:gravity="bottom">
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginHeader"
+        android:text="teest"
+        />
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/avatar"
+    />
     <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:paddingTop="5dp"
         android:src="@drawable/logo_sqli2" android:id="@+id/imageView" />

@@ -11,4 +11,18 @@
     <string name="Choose">Choisir</string>
     <string name="title_activity_anomalies">Anomalies</string>
     <string name="title_activity_nouvelle_activite">Nouvelle Formation</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Mot de passe</string>
+    <string name="action_sign_in">Se Connecter</string>
+    <string name="action_sign_in_short">Authentification</string>
+    <string name="error_invalid_email">Addresse email invalide</string>
+    <string name="error_invalid_password">Mot de passe moins de 5 caractéres</string>
+    <string name="error_incorrect_password">Mot de passe incorrect</string>
+    <string name="error_field_required">Champ obligatoire</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
 </resources>

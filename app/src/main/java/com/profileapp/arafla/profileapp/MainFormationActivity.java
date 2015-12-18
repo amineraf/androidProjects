@@ -1,7 +1,5 @@
 package com.profileapp.arafla.profileapp;
 
-import android.app.SearchManager;
-import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -10,12 +8,6 @@ import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ListView;
-
-import java.util.ArrayList;
-
-import adapters.FormationAdapter;
-import service.FormationService;
 
 public class MainFormationActivity extends AppCompatActivity {
     private SearchView searchView;
@@ -42,17 +34,20 @@ public class MainFormationActivity extends AppCompatActivity {
         Intent myIntent;
         switch (item.getItemId()) {
             case R.id.addFormationSample:
-                 myIntent = new Intent(MainFormationActivity.this, NouvelleFormation.class);
+                myIntent = new Intent(MainFormationActivity.this, NouvelleFormation.class);
                 MainFormationActivity.this.startActivity(myIntent);
                 return true;
             case R.id.searchSample:
-                 myIntent = new Intent(MainFormationActivity.this, ResultatRecherche.class);
+                myIntent = new Intent(MainFormationActivity.this, ResultatRecherche.class);
+                MainFormationActivity.this.startActivity(myIntent);
+                return true;
+            case R.id.action_settings:
+                myIntent = new Intent(MainFormationActivity.this, LoginActivity.class);
                 MainFormationActivity.this.startActivity(myIntent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
-
 
 }

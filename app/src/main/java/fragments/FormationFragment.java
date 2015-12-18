@@ -12,6 +12,8 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
 import com.profileapp.arafla.profileapp.R;
 
 import java.util.List;
@@ -30,6 +32,8 @@ public class FormationFragment extends Fragment {
     FormationService formationService = new FormationService();
     List<String> formationList = formationService.getAllFormations();
     List<String> myFormation = formationService.getMyFormations();
+    RequestQueue mVolleyRequestQueue;
+
     public static FormationFragment newInstance(int page) {
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
@@ -42,6 +46,8 @@ public class FormationFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPage = getArguments().getInt(ARG_PAGE);
+        mVolleyRequestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
+
     }
 
     @Override
