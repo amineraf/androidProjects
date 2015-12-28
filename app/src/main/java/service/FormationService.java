@@ -7,9 +7,17 @@ import data.FormationDAO;
 import model.Formation;
 
 /**
- * Created by arafla on 27/10/2015.
+ * Created by arafla on 22/12/2015.
  */
 public class FormationService {
+    private static FormationService newInstance = new FormationService();
+
+    public static FormationService getInstance() {
+        return newInstance;
+    }
+
+    private FormationService() {
+    }
     FormationDAO formationDAO = new FormationDAO();
 
     public ArrayList<String> getAllFormations() {

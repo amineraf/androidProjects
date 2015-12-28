@@ -10,7 +10,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainFormationActivity extends AppCompatActivity {
-    private SearchView searchView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

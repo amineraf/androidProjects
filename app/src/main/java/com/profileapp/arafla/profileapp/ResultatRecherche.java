@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.app.ListActivity;
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,16 +18,19 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 
 import adapters.FormationAdapter;
+import fragments.FormationFragment;
 import service.FormationService;
+import sheredValues.CommonSharedPreferences;
 
 public class ResultatRecherche extends AppCompatActivity implements SearchView.OnQueryTextListener{
     private ListView formationListView;
     private FormationAdapter formationAdapter;
     private ArrayList<String> formationList;
-
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultat_recherche);
@@ -35,8 +39,7 @@ public class ResultatRecherche extends AppCompatActivity implements SearchView.O
     }
 
     private void initFriendList() {
-        FormationService formationService=new FormationService();
-        formationList =formationService.getAllFormations() ;
+        formationList = CommonSharedPreferences.getInstance(getApplicationContext()).getFormationList();
         formationListView = (ListView) findViewById(R.id.resultSearch);
         formationAdapter = new FormationAdapter(this, formationList);
         formationListView.setAdapter(formationAdapter);
@@ -45,8 +48,9 @@ public class ResultatRecherche extends AppCompatActivity implements SearchView.O
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position > 0 && position <= formationList.size()) {
-
-                    // handelListItemClick(formationAdapter.getItem(position - 1));
+                    CommonSharedPreferences.getInstance(getApplicationContext()).setCurrentFormation(formationList.get(position));
+                    Intent myIntent = new Intent(ResultatRecherche.this, FormationActivity.class);
+                    ResultatRecherche.this.startActivity(myIntent);
                 }
             }
         });
