@@ -1,4 +1,4 @@
-package sheredValues;
+package shaeredValues;
 
 import android.content.Context;
 import android.content.SharedPreferences;

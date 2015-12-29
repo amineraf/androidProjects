@@ -26,7 +26,7 @@ import java.util.Map;
 
 import model.Account;
 import service.FormationService;
-import sheredValues.CommonSharedPreferences;
+import shaeredValues.CommonSharedPreferences;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String URL_LOGIN ="http://profilapp.getsandbox.com/login" ;

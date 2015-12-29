@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import adapters.FormationListAdapter;
 import model.Formation;
 import service.FormationService;
 
@@ -77,8 +78,9 @@ public class FormationFragment extends Fragment {
        formationList = gson.fromJson(jsonFormations, ArrayList.class);
         if (formationList != null) {
             ListView formationListView = (ListView) v.findViewById(R.id.allFormation);
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),
-                    R.layout.text_view_formation, formationList);
+          /*  ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),
+                    R.layout.text_view_formation, formationList);*/
+            FormationListAdapter adapter=new FormationListAdapter(getActivity().getApplicationContext(),formationList);
             formationListView.setAdapter(adapter);
             formationListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
